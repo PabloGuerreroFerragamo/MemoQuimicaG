@@ -6,23 +6,29 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class Q1Facil extends javax.swing.JFrame {
-    
+
     private GomezClass llama = new GomezClass();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
     private ImageIcon imagenDos;
     private JButton[] guardador = new JButton[2];//guarda las imagenes de los botones
     private boolean segundaCara = false;
-    int puntaje=0;
+    int puntaje = 0;
+    int puntajeTotal = 0;
+    int puntajeTruco = 0;
+    int contador = 0;
+    int contadorMaximo = 0;
+    boolean marco = true;
+    boolean polo = false;
+    int[] Arreglo = llama.Varianza();
 
     public Q1Facil() {
         initComponents();
         setTitle("Memorama Quimnica Inorganica 1");
         Ordenar();
     }
-    
+
     private void Ordenar() {//ordena cartas de forma aleatoria al iniciar el programa
-        int[] Arreglo = llama.Varianza();
 
         jbt1.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[0] + ".png")));
         jbt2.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[1] + ".png")));
@@ -42,16 +48,22 @@ public class Q1Facil extends javax.swing.JFrame {
             guardador[0] = boton;
             caraVolteada = true;
             segundaCara = false;
+
         } else {
             boton.setEnabled(false);
             imagenDos = (ImageIcon) boton.getDisabledIcon();
             guardador[1] = boton;
             segundaCara = true;
-            puntaje=puntaje+10;
+
             if (!jbt1.isEnabled() && !jbt2.isEnabled() && !jbt3.isEnabled() && !jbt4.isEnabled() && !jbt5.isEnabled() && !jbt6.isEnabled() && !jbt7.isEnabled() && !jbt8.isEnabled()) {
+                puntaje = puntaje + 20;
+                jlb1.setText(String.valueOf(puntaje));
                 JOptionPane.showMessageDialog(this, "Tu puntaje es de: " + puntaje, "Ganaste papu!!", JOptionPane.INFORMATION_MESSAGE);
             }
         }
+        jlb1.setText(String.valueOf(puntaje));
+
+        contadorMaximo++;
     }
 
     private void comparador() {
@@ -59,11 +71,30 @@ public class Q1Facil extends javax.swing.JFrame {
             if (imagenUno.getDescription().compareTo(imagenDos.getDescription()) != 0) {
                 guardador[0].setEnabled(true);
                 guardador[1].setEnabled(true);
-                if (puntaje > 5) {
-                    puntaje=puntaje-5;
-                }
+
+                puntaje = puntaje - 5;
+
+                marco = false;
             }
+            while (contador < 1) {//Hace una comparacion falsa, para que el puntaje no se trabe
+                if (imagenUno.getDescription().compareTo(imagenDos.getDescription()) == 0) {
+                    puntajeTruco++;
+
+                }
+
+                contador++;
+            }
+            if (contador == 1) {
+                if (imagenUno.getDescription().compareTo(imagenDos.getDescription()) == 0) {
+                    puntaje = puntaje + 20;
+                    caraVolteada = false;
+
+                }
+
+            }
+
             caraVolteada = false;
+
         }
     }
 
@@ -73,6 +104,8 @@ public class Q1Facil extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jbt1 = new javax.swing.JButton();
         jbt2 = new javax.swing.JButton();
         jbt3 = new javax.swing.JButton();
@@ -81,6 +114,7 @@ public class Q1Facil extends javax.swing.JFrame {
         jbt6 = new javax.swing.JButton();
         jbt7 = new javax.swing.JButton();
         jbt8 = new javax.swing.JButton();
+        jlb1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,15 +123,31 @@ public class Q1Facil extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(121, 6, 63));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/LogoFinal.png"))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Dubai Medium", 0, 120)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("MemoQuimica");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1800, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(79, 79, 79)
+                .addComponent(jLabel2)
+                .addGap(244, 244, 244)
+                .addComponent(jLabel1)
+                .addContainerGap(453, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1800, 250));
@@ -246,6 +296,10 @@ public class Q1Facil extends javax.swing.JFrame {
         });
         jPanel1.add(jbt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 640, 250, 250));
 
+        jlb1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jlb1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jlb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 390, 300, 170));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -265,107 +319,66 @@ public class Q1Facil extends javax.swing.JFrame {
     }//GEN-LAST:event_jbt1ActionPerformed
 
     private void jbt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt2ActionPerformed
-     volteador(jbt2);
+        volteador(jbt2);
     }//GEN-LAST:event_jbt2ActionPerformed
 
     private void jbt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt3ActionPerformed
-        // TODO add your handling code here:
         volteador(jbt3);
     }//GEN-LAST:event_jbt3ActionPerformed
 
     private void jbt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt4ActionPerformed
-        // TODO add your handling code here:
         volteador(jbt4);
     }//GEN-LAST:event_jbt4ActionPerformed
 
     private void jbt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt5ActionPerformed
-        // TODO add your handling code here:
         volteador(jbt5);
     }//GEN-LAST:event_jbt5ActionPerformed
 
     private void jbt6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt6ActionPerformed
-        // TODO add your handling code here:
         volteador(jbt6);
     }//GEN-LAST:event_jbt6ActionPerformed
 
     private void jbt7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt7ActionPerformed
-        // TODO add your handling code here:
         volteador(jbt7);
     }//GEN-LAST:event_jbt7ActionPerformed
 
     private void jbt8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt8ActionPerformed
-        // TODO add your handling code here:
         volteador(jbt8);
     }//GEN-LAST:event_jbt8ActionPerformed
 
     private void jbt1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt1MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt1MouseExited
 
     private void jbt2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt2MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt2MouseExited
 
     private void jbt3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt3MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt3MouseExited
 
     private void jbt4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt4MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt4MouseExited
 
     private void jbt5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt5MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt5MouseExited
 
     private void jbt6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt6MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt6MouseExited
 
     private void jbt7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt7MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt7MouseExited
 
     private void jbt8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt8MouseExited
-        // TODO add your handling code here:
         comparador();
     }//GEN-LAST:event_jbt8MouseExited
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Q1Facil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Q1Facil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Q1Facil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Q1Facil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Q1Facil().setVisible(true);
@@ -374,6 +387,8 @@ public class Q1Facil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton jbt1;
@@ -384,5 +399,6 @@ public class Q1Facil extends javax.swing.JFrame {
     private javax.swing.JButton jbt6;
     private javax.swing.JButton jbt7;
     private javax.swing.JButton jbt8;
+    private javax.swing.JLabel jlb1;
     // End of variables declaration//GEN-END:variables
 }
