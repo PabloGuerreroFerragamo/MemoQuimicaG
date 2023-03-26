@@ -180,6 +180,11 @@ public class Q1Facil extends javax.swing.JFrame {
         jbt5.setContentAreaFilled(false);
         jbt5.setFocusable(false);
         jbt5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt5MouseExited(evt);
+            }
+        });
         jbt5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbt5ActionPerformed(evt);
@@ -193,6 +198,11 @@ public class Q1Facil extends javax.swing.JFrame {
         jbt6.setContentAreaFilled(false);
         jbt6.setFocusable(false);
         jbt6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt6MouseExited(evt);
+            }
+        });
         jbt6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbt6ActionPerformed(evt);
@@ -206,6 +216,11 @@ public class Q1Facil extends javax.swing.JFrame {
         jbt7.setContentAreaFilled(false);
         jbt7.setFocusable(false);
         jbt7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt7MouseExited(evt);
+            }
+        });
         jbt7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbt7ActionPerformed(evt);
@@ -219,6 +234,11 @@ public class Q1Facil extends javax.swing.JFrame {
         jbt8.setContentAreaFilled(false);
         jbt8.setFocusable(false);
         jbt8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt8MouseExited(evt);
+            }
+        });
         jbt8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbt8ActionPerformed(evt);
@@ -280,19 +300,43 @@ public class Q1Facil extends javax.swing.JFrame {
 
     private void jbt1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt1MouseExited
         // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt1MouseExited
 
     private void jbt2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt2MouseExited
         // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt2MouseExited
 
     private void jbt3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt3MouseExited
         // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt3MouseExited
 
     private void jbt4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt4MouseExited
         // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt4MouseExited
+
+    private void jbt5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt5MouseExited
+        // TODO add your handling code here:
+        comparador();
+    }//GEN-LAST:event_jbt5MouseExited
+
+    private void jbt6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt6MouseExited
+        // TODO add your handling code here:
+        comparador();
+    }//GEN-LAST:event_jbt6MouseExited
+
+    private void jbt7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt7MouseExited
+        // TODO add your handling code here:
+        comparador();
+    }//GEN-LAST:event_jbt7MouseExited
+
+    private void jbt8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt8MouseExited
+        // TODO add your handling code here:
+        comparador();
+    }//GEN-LAST:event_jbt8MouseExited
 
     /**
      * @param args the command line arguments
