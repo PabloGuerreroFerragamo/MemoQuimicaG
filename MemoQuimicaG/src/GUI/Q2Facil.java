@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
-public class Q1Facil extends javax.swing.JFrame {
+public class Q2Facil extends javax.swing.JFrame {
 
     private GomezClass llama = new GomezClass();
     private boolean caraVolteada = false;
@@ -22,7 +22,7 @@ public class Q1Facil extends javax.swing.JFrame {
     boolean polo = false;
     int[] Arreglo = llama.Varianza();
 
-    public Q1Facil() {
+    public Q2Facil() {
         initComponents();
         this.setLocationRelativeTo(null);
         setTitle("Memorama Quimnica Inorganica 1");
@@ -118,8 +118,8 @@ public class Q1Facil extends javax.swing.JFrame {
         jbt7 = new javax.swing.JButton();
         jbt8 = new javax.swing.JButton();
         jlb1 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,7 +132,7 @@ public class Q1Facil extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Dubai Medium", 0, 120)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Química I");
+        jLabel1.setText("Química II");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -141,9 +141,9 @@ public class Q1Facil extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 490, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 496, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(461, 461, 461))
+                .addGap(423, 423, 423))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +153,7 @@ public class Q1Facil extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel2))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                        .addGap(19, 19, 19)
                         .addComponent(jLabel1)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
@@ -304,22 +304,10 @@ public class Q1Facil extends javax.swing.JFrame {
         });
         jPanel1.add(jbt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 640, 250, 250));
 
+        jlb1.setBackground(new java.awt.Color(0, 153, 51));
         jlb1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jlb1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.add(jlb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 390, 300, 170));
-
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton6.setText("Regresar a Menu de Dificultades");
-        jButton6.setBorderPainted(false);
-        jButton6.setHideActionText(true);
-        jButton6.setRequestFocusEnabled(false);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1450, 740, -1, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -332,7 +320,20 @@ public class Q1Facil extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 650, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 650, -1, 30));
+
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
+        jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton6.setText("Regresar a Menu de Dificultades");
+        jButton6.setBorderPainted(false);
+        jButton6.setHideActionText(true);
+        jButton6.setRequestFocusEnabled(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 740, -1, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -412,22 +413,22 @@ public class Q1Facil extends javax.swing.JFrame {
         comparador();
     }//GEN-LAST:event_jbt8MouseExited
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        MenuDificultad ventana = new MenuDificultad();
-        ventana.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         MenuPrincipal ventana = new MenuPrincipal();
         ventana.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        MenuDificultad ventana = new MenuDificultad();
+        ventana.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Q1Facil().setVisible(true);
+                new Q2Facil().setVisible(true);
             }
         });
     }
