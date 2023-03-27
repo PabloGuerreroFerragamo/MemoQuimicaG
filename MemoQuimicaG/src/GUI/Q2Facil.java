@@ -29,7 +29,6 @@ public class Q2Facil extends javax.swing.JFrame {
         Ordenar();
     }
 
-
     private void Ordenar() {//ordena cartas de forma aleatoria al iniciar el programa
 
         jbt1.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[0] + ".png")));
@@ -41,7 +40,8 @@ public class Q2Facil extends javax.swing.JFrame {
         jbt7.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[6] + ".png")));
         jbt8.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[7] + ".png")));
     }
-      private void volteador(JButton boton) {
+
+    private void volteador(JButton boton) {
 
         if (!caraVolteada) {
             boton.setEnabled(false);
@@ -98,8 +98,6 @@ public class Q2Facil extends javax.swing.JFrame {
 
         }
     }
-
-    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -311,8 +309,11 @@ public class Q2Facil extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton7.setText("Regresar a Menu Principal");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/regresa.png"))); // NOI18N
+        jButton7.setBorder(null);
         jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setFocusPainted(false);
         jButton7.setHideActionText(true);
         jButton7.setRequestFocusEnabled(false);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -320,12 +321,15 @@ public class Q2Facil extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1480, 650, -1, 30));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 610, -1, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton6.setText("Regresar a Menu de Dificultades");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/regresaDifi.png"))); // NOI18N
+        jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setFocusPainted(false);
         jButton6.setHideActionText(true);
         jButton6.setRequestFocusEnabled(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -333,7 +337,7 @@ public class Q2Facil extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1470, 740, -1, 30));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 730, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -417,12 +421,15 @@ public class Q2Facil extends javax.swing.JFrame {
         MenuPrincipal ventana = new MenuPrincipal();
         ventana.setVisible(true);
         this.setVisible(false);
+        ventana.contador = 0;
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         MenuDificultad ventana = new MenuDificultad();
+        MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
         ventana.setVisible(true);
         this.setVisible(false);
+        llamadoDeEmergencia.contador = 0;
     }//GEN-LAST:event_jButton6ActionPerformed
     public static void main(String args[]) {
 

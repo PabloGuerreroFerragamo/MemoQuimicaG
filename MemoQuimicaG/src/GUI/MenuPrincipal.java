@@ -22,7 +22,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jlb2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -31,7 +30,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(121, 6, 63));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/LogoFinal.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/LogoFinal.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Dubai Medium", 0, 120)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -62,12 +61,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jButton8.setBackground(new java.awt.Color(255, 254, 254));
         jButton8.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
-        jButton8.setText("Quimica Inorganica I");
-        jButton8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0), 9));
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/Inorganica.png"))); // NOI18N
+        jButton8.setBorder(null);
         jButton8.setBorderPainted(false);
+        jButton8.setContentAreaFilled(false);
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton8.setDefaultCapable(false);
         jButton8.setFocusPainted(false);
+        jButton8.setFocusable(false);
         jButton8.setHideActionText(true);
         jButton8.setRequestFocusEnabled(false);
+        jButton8.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/inorganicaSelec.png"))); // NOI18N
+        jButton8.setSelected(true);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -77,11 +82,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(255, 254, 254));
         jButton6.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
-        jButton6.setText("Quimica Avanzada III");
-        jButton6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0), 9));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/Avanzada.png"))); // NOI18N
+        jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setFocusPainted(false);
+        jButton6.setFocusable(false);
         jButton6.setHideActionText(true);
         jButton6.setRequestFocusEnabled(false);
+        jButton6.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/avanzadaSel.png"))); // NOI18N
+        jButton6.setSelected(true);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -91,29 +102,38 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(255, 254, 254));
         jButton5.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
-        jButton5.setText("Quimica Termoquimica IV");
-        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0), 9));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/eduardoGod.png"))); // NOI18N
+        jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setFocusPainted(false);
+        jButton5.setFocusable(false);
         jButton5.setHideActionText(true);
         jButton5.setRequestFocusEnabled(false);
+        jButton5.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/termoSel.png"))); // NOI18N
+        jButton5.setSelected(true);
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 610, 400, 200));
 
         jButton7.setBackground(new java.awt.Color(255, 254, 254));
         jButton7.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
-        jButton7.setText("Quimica Organica II");
-        jButton7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0), 9));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/Organic.png"))); // NOI18N
+        jButton7.setBorder(null);
         jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.setFocusPainted(false);
+        jButton7.setFocusable(false);
         jButton7.setHideActionText(true);
         jButton7.setRequestFocusEnabled(false);
+        jButton7.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/organicN.png"))); // NOI18N
+        jButton7.setSelected(true);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
         jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 340, 400, 200));
-
-        jlb2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jPanel1.add(jlb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 280, 110));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,12 +157,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuDificultad Ventana = new MenuDificultad();
         Ventana.setVisible(true);
         this.setVisible(false);
+//        if(contador!=1){
+//            contador=0;
+//        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         Q1Facil ventana = new Q1Facil();
         ventana.setVisible(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -152,6 +176,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuDificultad Ventana = new MenuDificultad();
         Ventana.setVisible(true);
         this.setVisible(false);
+        if(contador!=2){
+            contador=0;
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
@@ -198,6 +225,5 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel jlb2;
     // End of variables declaration//GEN-END:variables
 }

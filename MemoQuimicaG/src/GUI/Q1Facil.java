@@ -141,7 +141,7 @@ public class Q1Facil extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 490, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 790, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(461, 461, 461))
         );
@@ -306,33 +306,45 @@ public class Q1Facil extends javax.swing.JFrame {
 
         jlb1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jlb1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jlb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 390, 300, 170));
+        jPanel1.add(jlb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 350, 300, 170));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton6.setText("Regresar a Menu de Dificultades");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/regresaDifi.png"))); // NOI18N
+        jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setFocusPainted(false);
         jButton6.setHideActionText(true);
         jButton6.setRequestFocusEnabled(false);
+        jButton6.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/diciculDiff.png"))); // NOI18N
+        jButton6.setSelected(true);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1450, 740, -1, -1));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 730, -1, -1));
 
         jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton7.setText("Regresar a Menu Principal");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/regresa.png"))); // NOI18N
+        jButton7.setBorder(null);
         jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.setFocusPainted(false);
         jButton7.setHideActionText(true);
         jButton7.setRequestFocusEnabled(false);
+        jButton7.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/menuPriSel.png"))); // NOI18N
+        jButton7.setSelected(true);
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 650, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 610, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -414,14 +426,17 @@ public class Q1Facil extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         MenuDificultad ventana = new MenuDificultad();
+        MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
         ventana.setVisible(true);
         this.setVisible(false);
+        llamadoDeEmergencia.contador=0;
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         MenuPrincipal ventana = new MenuPrincipal();
         ventana.setVisible(true);
         this.setVisible(false);
+        ventana.contador=0;
     }//GEN-LAST:event_jButton7ActionPerformed
     public static void main(String args[]) {
 
