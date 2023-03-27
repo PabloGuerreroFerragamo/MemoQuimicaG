@@ -92,6 +92,11 @@ public class MenuDificultad extends javax.swing.JFrame {
         jButton5.setRequestFocusEnabled(false);
         jButton5.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/medioDiff.png"))); // NOI18N
         jButton5.setSelected(true);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 470, 400, 200));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
@@ -151,21 +156,21 @@ public class MenuDificultad extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
-        jlb1.setText(String.valueOf(llamadoDeEmergencia.contador));
-//        if(llamadoDeEmergencia.contador==1){
+
+        if(llamadoDeEmergencia.contador==1){
             Q1Facil ventana = new Q1Facil();
         ventana.setVisible(true);
         this.setVisible(false);
         
-//        }
-//        
-//        if(llamadoDeEmergencia.contador==2){
-//            Q2Facil ventana = new Q2Facil();
-//        ventana.setVisible(true);
-//        this.setVisible(false);
-//        
-//        }
-//        
+        }
+        
+        if(llamadoDeEmergencia.contador==2){
+            Q2Facil ventana = new Q2Facil();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        
+        }
+        
 
         
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -182,6 +187,20 @@ public class MenuDificultad extends javax.swing.JFrame {
         this.setVisible(false);
         ventana.contador=0;
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // Medio
+         MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
+
+        if(llamadoDeEmergencia.contador==1){
+            Q1Medio ventana = new Q1Medio();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        
+        }
+        
+       
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

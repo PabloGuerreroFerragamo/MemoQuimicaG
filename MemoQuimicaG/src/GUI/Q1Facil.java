@@ -429,7 +429,7 @@ public class Q1Facil extends javax.swing.JFrame {
         MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
         ventana.setVisible(true);
         this.setVisible(false);
-        llamadoDeEmergencia.contador=0;
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

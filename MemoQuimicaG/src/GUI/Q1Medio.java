@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
-public class Q2Facil extends javax.swing.JFrame {
+public class Q1Medio extends javax.swing.JFrame {
 
     private GomezClass llama = new GomezClass();
     private boolean caraVolteada = false;
@@ -22,12 +22,13 @@ public class Q2Facil extends javax.swing.JFrame {
     boolean polo = false;
     int[] Arreglo = llama.Varianza();
 
-    public Q2Facil() {
+    public Q1Medio() {
         initComponents();
         this.setLocationRelativeTo(null);
         setTitle("Memorama Quimnica Inorganica 1");
         Ordenar();
     }
+
 
     private void Ordenar() {//ordena cartas de forma aleatoria al iniciar el programa
 
@@ -40,8 +41,7 @@ public class Q2Facil extends javax.swing.JFrame {
         jbt7.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[6] + ".png")));
         jbt8.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[7] + ".png")));
     }
-
-    private void volteador(JButton boton) {
+      private void volteador(JButton boton) {
 
         if (!caraVolteada) {
             boton.setEnabled(false);
@@ -99,6 +99,8 @@ public class Q2Facil extends javax.swing.JFrame {
         }
     }
 
+    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -116,8 +118,16 @@ public class Q2Facil extends javax.swing.JFrame {
         jbt7 = new javax.swing.JButton();
         jbt8 = new javax.swing.JButton();
         jlb1 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jbt9 = new javax.swing.JButton();
+        jbt10 = new javax.swing.JButton();
+        jbt11 = new javax.swing.JButton();
+        jbt12 = new javax.swing.JButton();
+        jbt13 = new javax.swing.JButton();
+        jbt14 = new javax.swing.JButton();
+        jbt15 = new javax.swing.JButton();
+        jbt16 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,7 +140,7 @@ public class Q2Facil extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Dubai Medium", 0, 120)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Química II");
+        jLabel1.setText("Química I");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -139,9 +149,9 @@ public class Q2Facil extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 496, Short.MAX_VALUE)
+                .addGap(328, 328, 328)
                 .addComponent(jLabel1)
-                .addGap(423, 423, 423))
+                .addContainerGap(723, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,17 +161,16 @@ public class Q2Facil extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel2))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addGap(21, 21, 21)
                         .addComponent(jLabel1)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1800, 250));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1900, 250));
 
+        jbt1.setBackground(new java.awt.Color(153, 255, 0));
         jbt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt1.setBorder(null);
-        jbt1.setBorderPainted(false);
-        jbt1.setContentAreaFilled(false);
         jbt1.setFocusable(false);
         jbt1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -174,12 +183,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 250, 250));
+        jPanel1.add(jbt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 200, 200));
 
+        jbt2.setBackground(new java.awt.Color(153, 255, 0));
         jbt2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt2.setBorder(null);
-        jbt2.setBorderPainted(false);
-        jbt2.setContentAreaFilled(false);
         jbt2.setFocusable(false);
         jbt2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -192,12 +200,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 250, 250));
+        jPanel1.add(jbt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 200, 200));
 
+        jbt3.setBackground(new java.awt.Color(153, 255, 0));
         jbt3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt3.setBorder(null);
-        jbt3.setBorderPainted(false);
-        jbt3.setContentAreaFilled(false);
         jbt3.setFocusable(false);
         jbt3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -210,12 +217,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 310, 250, 250));
+        jPanel1.add(jbt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 200, 200));
 
+        jbt4.setBackground(new java.awt.Color(153, 255, 0));
         jbt4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt4.setBorder(null);
-        jbt4.setBorderPainted(false);
-        jbt4.setContentAreaFilled(false);
         jbt4.setFocusable(false);
         jbt4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -228,12 +234,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 310, 250, 250));
+        jPanel1.add(jbt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 310, 200, 200));
 
+        jbt5.setBackground(new java.awt.Color(153, 255, 0));
         jbt5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt5.setBorder(null);
-        jbt5.setBorderPainted(false);
-        jbt5.setContentAreaFilled(false);
         jbt5.setFocusable(false);
         jbt5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -246,12 +251,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 630, 250, 250));
+        jPanel1.add(jbt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 310, 200, 200));
 
+        jbt6.setBackground(new java.awt.Color(153, 255, 0));
         jbt6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt6.setBorder(null);
-        jbt6.setBorderPainted(false);
-        jbt6.setContentAreaFilled(false);
         jbt6.setFocusable(false);
         jbt6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -264,12 +268,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 630, 250, 250));
+        jPanel1.add(jbt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 310, 200, 200));
 
+        jbt7.setBackground(new java.awt.Color(153, 255, 0));
         jbt7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt7.setBorder(null);
-        jbt7.setBorderPainted(false);
-        jbt7.setContentAreaFilled(false);
         jbt7.setFocusable(false);
         jbt7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -282,12 +285,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 640, 250, 250));
+        jPanel1.add(jbt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 310, 200, 200));
 
+        jbt8.setBackground(new java.awt.Color(153, 255, 0));
         jbt8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt8.setBorder(null);
-        jbt8.setBorderPainted(false);
-        jbt8.setContentAreaFilled(false);
         jbt8.setFocusable(false);
         jbt8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -300,28 +302,11 @@ public class Q2Facil extends javax.swing.JFrame {
                 jbt8ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 640, 250, 250));
+        jPanel1.add(jbt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1620, 310, 200, 200));
 
-        jlb1.setBackground(new java.awt.Color(0, 153, 51));
         jlb1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jlb1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jlb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 390, 300, 170));
-
-        jButton7.setBackground(new java.awt.Color(255, 255, 255));
-        jButton7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/regresa.png"))); // NOI18N
-        jButton7.setBorder(null);
-        jButton7.setBorderPainted(false);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setFocusPainted(false);
-        jButton7.setHideActionText(true);
-        jButton7.setRequestFocusEnabled(false);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 610, -1, -1));
+        jPanel1.add(jlb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 780, 300, 170));
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -329,15 +314,173 @@ public class Q2Facil extends javax.swing.JFrame {
         jButton6.setBorder(null);
         jButton6.setBorderPainted(false);
         jButton6.setContentAreaFilled(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton6.setFocusPainted(false);
         jButton6.setHideActionText(true);
         jButton6.setRequestFocusEnabled(false);
+        jButton6.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/diciculDiff.png"))); // NOI18N
+        jButton6.setSelected(true);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1360, 730, -1, -1));
+        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 810, -1, -1));
+
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
+        jButton7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/regresa.png"))); // NOI18N
+        jButton7.setBorder(null);
+        jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.setFocusPainted(false);
+        jButton7.setHideActionText(true);
+        jButton7.setRequestFocusEnabled(false);
+        jButton7.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/menuPriSel.png"))); // NOI18N
+        jButton7.setSelected(true);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 820, -1, -1));
+
+        jbt9.setBackground(new java.awt.Color(153, 255, 0));
+        jbt9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt9.setBorder(null);
+        jbt9.setFocusable(false);
+        jbt9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt9MouseExited(evt);
+            }
+        });
+        jbt9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 520, 200, 200));
+
+        jbt10.setBackground(new java.awt.Color(153, 255, 0));
+        jbt10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt10.setBorder(null);
+        jbt10.setFocusable(false);
+        jbt10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt10MouseExited(evt);
+            }
+        });
+        jbt10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt10ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 520, 200, 200));
+
+        jbt11.setBackground(new java.awt.Color(153, 255, 0));
+        jbt11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt11.setBorder(null);
+        jbt11.setFocusable(false);
+        jbt11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt11MouseExited(evt);
+            }
+        });
+        jbt11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt11ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt11, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 520, 200, 200));
+
+        jbt12.setBackground(new java.awt.Color(153, 255, 0));
+        jbt12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt12.setBorder(null);
+        jbt12.setFocusable(false);
+        jbt12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt12MouseExited(evt);
+            }
+        });
+        jbt12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt12ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 520, 200, 200));
+
+        jbt13.setBackground(new java.awt.Color(153, 255, 0));
+        jbt13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt13.setBorder(null);
+        jbt13.setFocusable(false);
+        jbt13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt13MouseExited(evt);
+            }
+        });
+        jbt13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt13ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt13, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 520, 200, 200));
+
+        jbt14.setBackground(new java.awt.Color(153, 255, 0));
+        jbt14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt14.setBorder(null);
+        jbt14.setFocusable(false);
+        jbt14.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt14MouseExited(evt);
+            }
+        });
+        jbt14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt14ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 520, 200, 200));
+
+        jbt15.setBackground(new java.awt.Color(153, 255, 0));
+        jbt15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt15.setBorder(null);
+        jbt15.setFocusable(false);
+        jbt15.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt15MouseExited(evt);
+            }
+        });
+        jbt15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt15ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 520, 200, 200));
+
+        jbt16.setBackground(new java.awt.Color(153, 255, 0));
+        jbt16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
+        jbt16.setBorder(null);
+        jbt16.setFocusable(false);
+        jbt16.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
+        jbt16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbt16MouseExited(evt);
+            }
+        });
+        jbt16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt16ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbt16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1620, 520, 200, 200));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -347,7 +490,7 @@ public class Q2Facil extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
 
         pack();
@@ -417,13 +560,6 @@ public class Q2Facil extends javax.swing.JFrame {
         comparador();
     }//GEN-LAST:event_jbt8MouseExited
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        MenuPrincipal ventana = new MenuPrincipal();
-        ventana.setVisible(true);
-        this.setVisible(false);
-        ventana.contador = 0;
-    }//GEN-LAST:event_jButton7ActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         MenuDificultad ventana = new MenuDificultad();
         MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
@@ -431,11 +567,82 @@ public class Q2Facil extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        MenuPrincipal ventana = new MenuPrincipal();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        ventana.contador=0;
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jbt9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt9MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt9MouseExited
+
+    private void jbt9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt9ActionPerformed
+
+    private void jbt10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt10MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt10MouseExited
+
+    private void jbt10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt10ActionPerformed
+
+    private void jbt11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt11MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt11MouseExited
+
+    private void jbt11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt11ActionPerformed
+
+    private void jbt12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt12MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt12MouseExited
+
+    private void jbt12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt12ActionPerformed
+
+    private void jbt13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt13MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt13MouseExited
+
+    private void jbt13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt13ActionPerformed
+
+    private void jbt14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt14MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt14MouseExited
+
+    private void jbt14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt14ActionPerformed
+
+    private void jbt15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt15MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt15MouseExited
+
+    private void jbt15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt15ActionPerformed
+
+    private void jbt16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt16MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt16MouseExited
+
+    private void jbt16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt16ActionPerformed
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Q2Facil().setVisible(true);
+                new Q1Medio().setVisible(true);
             }
         });
     }
@@ -448,6 +655,13 @@ public class Q2Facil extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton jbt1;
+    private javax.swing.JButton jbt10;
+    private javax.swing.JButton jbt11;
+    private javax.swing.JButton jbt12;
+    private javax.swing.JButton jbt13;
+    private javax.swing.JButton jbt14;
+    private javax.swing.JButton jbt15;
+    private javax.swing.JButton jbt16;
     private javax.swing.JButton jbt2;
     private javax.swing.JButton jbt3;
     private javax.swing.JButton jbt4;
@@ -455,6 +669,7 @@ public class Q2Facil extends javax.swing.JFrame {
     private javax.swing.JButton jbt6;
     private javax.swing.JButton jbt7;
     private javax.swing.JButton jbt8;
+    private javax.swing.JButton jbt9;
     private javax.swing.JLabel jlb1;
     // End of variables declaration//GEN-END:variables
 }
