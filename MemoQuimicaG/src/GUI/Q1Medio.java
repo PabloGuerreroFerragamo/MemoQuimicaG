@@ -65,7 +65,7 @@ public class Q1Medio extends javax.swing.JFrame {
             guardador[1] = boton;
             segundaCara = true;
 
-            if (!jbt1.isEnabled() && !jbt2.isEnabled() && !jbt3.isEnabled() && !jbt4.isEnabled() && !jbt5.isEnabled() && !jbt6.isEnabled() && !jbt7.isEnabled() && !jbt8.isEnabled()) {
+            if (!jbt1.isEnabled() && !jbt2.isEnabled() && !jbt3.isEnabled() && !jbt4.isEnabled() && !jbt5.isEnabled() && !jbt6.isEnabled() && !jbt7.isEnabled() && !jbt8.isEnabled()&& !jbt9.isEnabled()&& !jbt10.isEnabled()&& !jbt11.isEnabled()&& !jbt12.isEnabled()&& !jbt13.isEnabled()&& !jbt14.isEnabled()&& !jbt15.isEnabled()&& !jbt16.isEnabled()) {
                 puntaje = puntaje + 20;
                 jlb1.setText(String.valueOf(puntaje));
                 JOptionPane.showMessageDialog(this, "Tu puntaje es de: " + puntaje, "Ganaste papu!!", JOptionPane.INFORMATION_MESSAGE);
@@ -180,6 +180,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt1.setBackground(new java.awt.Color(153, 255, 0));
         jbt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt1.setBorder(null);
+        jbt1.setBorderPainted(false);
+        jbt1.setContentAreaFilled(false);
+        jbt1.setFocusPainted(false);
         jbt1.setFocusable(false);
         jbt1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -197,6 +200,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt2.setBackground(new java.awt.Color(153, 255, 0));
         jbt2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt2.setBorder(null);
+        jbt2.setBorderPainted(false);
+        jbt2.setContentAreaFilled(false);
+        jbt2.setFocusPainted(false);
         jbt2.setFocusable(false);
         jbt2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -214,6 +220,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt3.setBackground(new java.awt.Color(153, 255, 0));
         jbt3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt3.setBorder(null);
+        jbt3.setBorderPainted(false);
+        jbt3.setContentAreaFilled(false);
+        jbt3.setFocusPainted(false);
         jbt3.setFocusable(false);
         jbt3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -231,6 +240,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt4.setBackground(new java.awt.Color(153, 255, 0));
         jbt4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt4.setBorder(null);
+        jbt4.setBorderPainted(false);
+        jbt4.setContentAreaFilled(false);
+        jbt4.setFocusPainted(false);
         jbt4.setFocusable(false);
         jbt4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -248,6 +260,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt5.setBackground(new java.awt.Color(153, 255, 0));
         jbt5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt5.setBorder(null);
+        jbt5.setBorderPainted(false);
+        jbt5.setContentAreaFilled(false);
+        jbt5.setFocusPainted(false);
         jbt5.setFocusable(false);
         jbt5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -265,6 +280,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt6.setBackground(new java.awt.Color(153, 255, 0));
         jbt6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt6.setBorder(null);
+        jbt6.setBorderPainted(false);
+        jbt6.setContentAreaFilled(false);
+        jbt6.setFocusPainted(false);
         jbt6.setFocusable(false);
         jbt6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -282,6 +300,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt7.setBackground(new java.awt.Color(153, 255, 0));
         jbt7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt7.setBorder(null);
+        jbt7.setBorderPainted(false);
+        jbt7.setContentAreaFilled(false);
+        jbt7.setFocusPainted(false);
         jbt7.setFocusable(false);
         jbt7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -299,6 +320,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt8.setBackground(new java.awt.Color(153, 255, 0));
         jbt8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt8.setBorder(null);
+        jbt8.setBorderPainted(false);
+        jbt8.setContentAreaFilled(false);
+        jbt8.setFocusPainted(false);
         jbt8.setFocusable(false);
         jbt8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -358,6 +382,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt9.setBackground(new java.awt.Color(153, 255, 0));
         jbt9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt9.setBorder(null);
+        jbt9.setBorderPainted(false);
+        jbt9.setContentAreaFilled(false);
+        jbt9.setFocusPainted(false);
         jbt9.setFocusable(false);
         jbt9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -375,6 +402,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt10.setBackground(new java.awt.Color(153, 255, 0));
         jbt10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt10.setBorder(null);
+        jbt10.setBorderPainted(false);
+        jbt10.setContentAreaFilled(false);
+        jbt10.setFocusPainted(false);
         jbt10.setFocusable(false);
         jbt10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt10.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -392,6 +422,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt11.setBackground(new java.awt.Color(153, 255, 0));
         jbt11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt11.setBorder(null);
+        jbt11.setBorderPainted(false);
+        jbt11.setContentAreaFilled(false);
+        jbt11.setFocusPainted(false);
         jbt11.setFocusable(false);
         jbt11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -409,6 +442,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt12.setBackground(new java.awt.Color(153, 255, 0));
         jbt12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt12.setBorder(null);
+        jbt12.setBorderPainted(false);
+        jbt12.setContentAreaFilled(false);
+        jbt12.setFocusPainted(false);
         jbt12.setFocusable(false);
         jbt12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt12.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -426,6 +462,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt13.setBackground(new java.awt.Color(153, 255, 0));
         jbt13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt13.setBorder(null);
+        jbt13.setBorderPainted(false);
+        jbt13.setContentAreaFilled(false);
+        jbt13.setFocusPainted(false);
         jbt13.setFocusable(false);
         jbt13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt13.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -443,6 +482,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt14.setBackground(new java.awt.Color(153, 255, 0));
         jbt14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt14.setBorder(null);
+        jbt14.setBorderPainted(false);
+        jbt14.setContentAreaFilled(false);
+        jbt14.setFocusPainted(false);
         jbt14.setFocusable(false);
         jbt14.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt14.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -460,6 +502,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt15.setBackground(new java.awt.Color(153, 255, 0));
         jbt15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt15.setBorder(null);
+        jbt15.setBorderPainted(false);
+        jbt15.setContentAreaFilled(false);
+        jbt15.setFocusPainted(false);
         jbt15.setFocusable(false);
         jbt15.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt15.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -477,6 +522,9 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt16.setBackground(new java.awt.Color(153, 255, 0));
         jbt16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/carta0.png"))); // NOI18N
         jbt16.setBorder(null);
+        jbt16.setBorderPainted(false);
+        jbt16.setContentAreaFilled(false);
+        jbt16.setFocusPainted(false);
         jbt16.setFocusable(false);
         jbt16.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenesQ1/cr.png"))); // NOI18N
         jbt16.addMouseListener(new java.awt.event.MouseAdapter() {
