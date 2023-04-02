@@ -30,9 +30,7 @@ public class GomezClass {
         
         return almacen;
     }
-    public static void main(String[] args) {
-        Varianza();
-        }
+   
     }
     
             

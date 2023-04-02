@@ -1,10 +1,12 @@
+
 package packeteGomez;
 
 import java.util.Random;
 
-public class PibloClass {
-    public static int[] Varianza() {
-        int[] almacen = new int[16];//con String fallan las operaciones
+public class prueba {
+    public static void main(String[] args) {
+        // TODO code application logic here
+      int[] almacen = new int[16];//con String fallan las operaciones
         int contador = 0;
 
         while (contador < 16) {//las variables aleatorias se ligan al contador, por lo que se tiene registro de ellas gracias al numero del contador, osea lo que paso cuando se ejecuto el while
@@ -26,8 +28,9 @@ public class PibloClass {
             }//fin
 
         }
-        
-        return almacen;
+        for (int i = 0; i < 16; i++) {
+            System.out.print(almacen[i]+" ");
+        }
     }
     
 }

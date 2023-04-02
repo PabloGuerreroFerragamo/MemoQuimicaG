@@ -4,10 +4,11 @@ import packeteGomez.GomezClass;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import packeteGomez.PibloClass;
 
 public class Q1Medio extends javax.swing.JFrame {
 
-    private GomezClass llama = new GomezClass();
+    private PibloClass llama = new PibloClass();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
     private ImageIcon imagenDos;
@@ -25,7 +26,7 @@ public class Q1Medio extends javax.swing.JFrame {
     public Q1Medio() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setTitle("Memorama Quimnica Inorganica 1");
+        setTitle("Memorama Quimnica Inorganica 2");
         Ordenar();
     }
 
@@ -40,6 +41,14 @@ public class Q1Medio extends javax.swing.JFrame {
         jbt6.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[5] + ".png")));
         jbt7.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[6] + ".png")));
         jbt8.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[7] + ".png")));
+        jbt9.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[8] + ".png")));
+        jbt10.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[9] + ".png")));
+        jbt11.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[10] + ".png")));
+        jbt12.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[11] + ".png")));
+        jbt13.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[12] + ".png")));
+        jbt14.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[13] + ".png")));
+        jbt15.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[14] + ".png")));
+        jbt16.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ1/carta" + Arreglo[15] + ".png")));
     }
       private void volteador(JButton boton) {
 
@@ -576,67 +585,68 @@ public class Q1Medio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jbt9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt9MouseExited
-        // TODO add your handling code here:
+       comparador();
     }//GEN-LAST:event_jbt9MouseExited
 
     private void jbt9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt9ActionPerformed
-        // TODO add your handling code here:
+        
+        volteador(jbt9);
     }//GEN-LAST:event_jbt9ActionPerformed
 
     private void jbt10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt10MouseExited
-        // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt10MouseExited
 
     private void jbt10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt10ActionPerformed
-        // TODO add your handling code here:
+       volteador(jbt10);
     }//GEN-LAST:event_jbt10ActionPerformed
 
     private void jbt11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt11MouseExited
-        // TODO add your handling code here:
+      comparador();
     }//GEN-LAST:event_jbt11MouseExited
 
     private void jbt11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt11ActionPerformed
-        // TODO add your handling code here:
+        volteador(jbt11);
     }//GEN-LAST:event_jbt11ActionPerformed
 
     private void jbt12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt12MouseExited
-        // TODO add your handling code here:
+       comparador();
     }//GEN-LAST:event_jbt12MouseExited
 
     private void jbt12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt12ActionPerformed
-        // TODO add your handling code here:
+       volteador(jbt12);
     }//GEN-LAST:event_jbt12ActionPerformed
 
     private void jbt13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt13MouseExited
-        // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt13MouseExited
 
     private void jbt13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt13ActionPerformed
-        // TODO add your handling code here:
+        volteador(jbt13);
     }//GEN-LAST:event_jbt13ActionPerformed
 
     private void jbt14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt14MouseExited
-        // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt14MouseExited
 
     private void jbt14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt14ActionPerformed
-        // TODO add your handling code here:
+        volteador(jbt14);
     }//GEN-LAST:event_jbt14ActionPerformed
 
     private void jbt15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt15MouseExited
-        // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt15MouseExited
 
     private void jbt15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt15ActionPerformed
-        // TODO add your handling code here:
+        volteador(jbt15);
     }//GEN-LAST:event_jbt15ActionPerformed
 
     private void jbt16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbt16MouseExited
-        // TODO add your handling code here:
+        comparador();
     }//GEN-LAST:event_jbt16MouseExited
 
     private void jbt16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt16ActionPerformed
-        // TODO add your handling code here:
+        volteador(jbt16);
     }//GEN-LAST:event_jbt16ActionPerformed
     public static void main(String args[]) {
 
