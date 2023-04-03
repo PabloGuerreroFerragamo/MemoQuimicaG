@@ -113,6 +113,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton5.setRequestFocusEnabled(false);
         jButton5.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/CSS/termoSel.png"))); // NOI18N
         jButton5.setSelected(true);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 610, 400, 200));
 
         jButton7.setBackground(new java.awt.Color(255, 254, 254));
@@ -163,10 +168,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        Q1Facil ventana = new Q1Facil();
-        ventana.setVisible(true);
+        //Quimica III
+        contador = contador + 3;
+
+        MenuDificultad Ventana = new MenuDificultad();
+        Ventana.setVisible(true);
         this.setVisible(false);
-        
+        if(contador!=3){
+            contador=0;
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -180,6 +190,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
             contador=0;
         }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        //Quimica IV
+        contador = contador + 4;
+
+        MenuDificultad Ventana = new MenuDificultad();
+        Ventana.setVisible(true);
+        this.setVisible(false);
+        if(contador!=4){
+            contador=0;
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

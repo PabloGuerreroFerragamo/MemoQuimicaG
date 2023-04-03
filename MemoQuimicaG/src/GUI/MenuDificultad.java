@@ -155,30 +155,61 @@ public class MenuDificultad extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        //Facil
         MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
 
         if(llamadoDeEmergencia.contador==1){
             Q1Facil ventana = new Q1Facil();
         ventana.setVisible(true);
         this.setVisible(false);
-        
         }
         
         if(llamadoDeEmergencia.contador==2){
             Q2Facil ventana = new Q2Facil();
         ventana.setVisible(true);
         this.setVisible(false);
-        
         }
         
+        if(llamadoDeEmergencia.contador==3){
+            Q3Facil ventana = new Q3Facil();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
 
-        
+        if(llamadoDeEmergencia.contador==4){
+            Q4Facil ventana = new Q4Facil();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        Q1Facil ventana = new Q1Facil();
+        //Dificil
+        MenuPrincipal llamadoDeEmergencia = new MenuPrincipal();
+
+        if(llamadoDeEmergencia.contador==1){
+            Q1Dificil ventana = new Q1Dificil();
         ventana.setVisible(true);
         this.setVisible(false);
+        }
+        
+        if(llamadoDeEmergencia.contador==2){
+            Q2Dificil ventana = new Q2Dificil();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
+        
+        if(llamadoDeEmergencia.contador==3){
+            Q3Dificil ventana = new Q3Dificil();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
+        
+        if(llamadoDeEmergencia.contador==4){
+            Q4Dificil ventana = new Q4Dificil();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -196,10 +227,24 @@ public class MenuDificultad extends javax.swing.JFrame {
             Q1Medio ventana = new Q1Medio();
         ventana.setVisible(true);
         this.setVisible(false);
-        
         }
         
-       
+        if(llamadoDeEmergencia.contador==2){
+            Q2Medio ventana = new Q2Medio();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
+        if(llamadoDeEmergencia.contador==3){
+            Q3Medio ventana = new Q3Medio();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
+        
+       if(llamadoDeEmergencia.contador==4){
+            Q4Medio ventana = new Q4Medio();
+        ventana.setVisible(true);
+        this.setVisible(false);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

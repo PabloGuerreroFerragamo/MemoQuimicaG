@@ -25,7 +25,7 @@ public class Q2Facil extends javax.swing.JFrame {
     public Q2Facil() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setTitle("Memorama Quimnica Inorganica 1");
+        setTitle("Memorama Quimnica Organica 1");
         Ordenar();
     }
 
