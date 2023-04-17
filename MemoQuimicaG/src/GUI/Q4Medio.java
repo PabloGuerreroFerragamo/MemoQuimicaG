@@ -1,5 +1,6 @@
 package GUI;
 
+import BD.VentanaPuntajes;
 import packeteGomez.GomezClass;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -7,48 +8,47 @@ import javax.swing.JOptionPane;
 import packeteGomez.PibloClass;
 
 public class Q4Medio extends javax.swing.JFrame {
-
+    public VentanaPuntajes conecta=new VentanaPuntajes();
+    VentanaPuntajes llamarA = new VentanaPuntajes();
     private PibloClass llama = new PibloClass();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
     private ImageIcon imagenDos;
     private JButton[] guardador = new JButton[2];//guarda las imagenes de los botones
     private boolean segundaCara = false;
-    int puntaje = 0;
+    public static int puntaje = 0;
     int puntajeTotal = 0;
     int puntajeTruco = 0;
     int contador = 0;
     int contadorMaximo = 0;
-    boolean marco = true;
-    boolean polo = false;
     int[] Arreglo = llama.Varianza();
 
     public Q4Medio() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setTitle("Memorama Quimnica Termoquimica 2");
+        setTitle("Memorama Quimica Termoquimica 4 Medio");
         Ordenar();
     }
 
 
     private void Ordenar() {//ordena cartas de forma aleatoria al iniciar el programa
 
-        jbt1.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[0] + ".png")));
-        jbt2.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[1] + ".png")));
-        jbt3.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[2] + ".png")));
-        jbt4.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[3] + ".png")));
-        jbt5.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[4] + ".png")));
-        jbt6.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[5] + ".png")));
-        jbt7.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[6] + ".png")));
-        jbt8.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[7] + ".png")));
-        jbt9.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[8] + ".png")));
-        jbt10.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[9] + ".png")));
-        jbt11.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[10] + ".png")));
-        jbt12.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[11] + ".png")));
-        jbt13.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[12] + ".png")));
-        jbt14.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[13] + ".png")));
-        jbt15.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[14] + ".png")));
-        jbt16.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ2/carta" + Arreglo[15] + ".png")));
+        jbt1.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[0] + ".png")));
+        jbt2.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[1] + ".png")));
+        jbt3.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[2] + ".png")));
+        jbt4.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[3] + ".png")));
+        jbt5.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[4] + ".png")));
+        jbt6.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[5] + ".png")));
+        jbt7.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[6] + ".png")));
+        jbt8.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[7] + ".png")));
+        jbt9.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[8] + ".png")));
+        jbt10.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[9] + ".png")));
+        jbt11.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[10] + ".png")));
+        jbt12.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[11] + ".png")));
+        jbt13.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[12] + ".png")));
+        jbt14.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[13] + ".png")));
+        jbt15.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[14] + ".png")));
+        jbt16.setDisabledIcon(new ImageIcon(getClass().getResource("/imagenesQ4/carta" + Arreglo[15] + ".png")));
     }
       private void volteador(JButton boton) {
 
@@ -69,6 +69,10 @@ public class Q4Medio extends javax.swing.JFrame {
                 puntaje = puntaje + 20;
                 jlb1.setText(String.valueOf(puntaje));
                 JOptionPane.showMessageDialog(this, "Tu puntaje es de: " + puntaje, "Ganaste papu!!", JOptionPane.INFORMATION_MESSAGE);
+                llamarA.quimcuatro=true;
+                llamarA.medio=true;
+                conecta.setVisible(true);
+                this.setVisible(false);
             }
         }
         jlb1.setText(String.valueOf(puntaje));
@@ -84,7 +88,6 @@ public class Q4Medio extends javax.swing.JFrame {
 
                 puntaje = puntaje - 5;
 
-                marco = false;
             }
             while (contador < 1) {//Hace una comparacion falsa, para que el puntaje no se trabe
                 if (imagenUno.getDescription().compareTo(imagenDos.getDescription()) == 0) {

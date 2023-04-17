@@ -1,5 +1,6 @@
 package GUI;
 
+import BD.VentanaPuntajes;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -7,26 +8,25 @@ import packeteGomez.DormirEsParaGiles;
 
 
 public class Q3Dificil extends javax.swing.JFrame {
-
+    public VentanaPuntajes conecta=new VentanaPuntajes();
+    VentanaPuntajes llamarA = new VentanaPuntajes();
     private DormirEsParaGiles llama = new DormirEsParaGiles();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
     private ImageIcon imagenDos;
     private JButton[] guardador = new JButton[2];//guarda las imagenes de los botones
     private boolean segundaCara = false;
-    int puntaje = 0;
+    public static int puntaje = 0;
     int puntajeTotal = 0;
     int puntajeTruco = 0;
     int contador = 0;
     int contadorMaximo = 0;
-    boolean marco = true;
-    boolean polo = false;
     int[] Arreglo = llama.Varianza();
 
     public Q3Dificil() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setTitle("Memorama Quimnica Avanzada 3");
+        setTitle("Memorama Quimica Avanzada 3 Dificil");
         Ordenar();
     }
 
@@ -78,6 +78,10 @@ public class Q3Dificil extends javax.swing.JFrame {
                 puntaje = puntaje + 20;
                 jlb1.setText(String.valueOf(puntaje));
                 JOptionPane.showMessageDialog(this, "Tu puntaje es de: " + puntaje, "Ganaste papu!!", JOptionPane.INFORMATION_MESSAGE);
+                llamarA.quimtres=true;
+                llamarA.dificil=true;
+                conecta.setVisible(true);
+                this.setVisible(false);
             }
         }
         jlb1.setText(String.valueOf(puntaje));
@@ -93,7 +97,6 @@ public class Q3Dificil extends javax.swing.JFrame {
 
                 puntaje = puntaje - 5;
 
-                marco = false;
             }
             while (contador < 1) {//Hace una comparacion falsa, para que el puntaje no se trabe
                 if (imagenUno.getDescription().compareTo(imagenDos.getDescription()) == 0) {

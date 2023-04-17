@@ -1,31 +1,31 @@
 package GUI;
 
+import BD.VentanaPuntajes;
 import packeteGomez.GomezClass;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class Q4Facil extends javax.swing.JFrame {
-
+    public VentanaPuntajes conecta=new VentanaPuntajes();
+    VentanaPuntajes llamarA = new VentanaPuntajes();
     private GomezClass llama = new GomezClass();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
     private ImageIcon imagenDos;
     private JButton[] guardador = new JButton[2];//guarda las imagenes de los botones
     private boolean segundaCara = false;
-    int puntaje = 0;
+    public static int puntaje = 0;
     int puntajeTotal = 0;
     int puntajeTruco = 0;
     int contador = 0;
     int contadorMaximo = 0;
-    boolean marco = true;
-    boolean polo = false;
     int[] Arreglo = llama.Varianza();
 
     public Q4Facil() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setTitle("Memorama Quimnica Termoquimica 1");
+        setTitle("Memorama Quimica Termoquimica 4 Facil");
         Ordenar();
     }
 
@@ -60,6 +60,10 @@ public class Q4Facil extends javax.swing.JFrame {
                 puntaje = puntaje + 20;
                 jlb1.setText(String.valueOf(puntaje));
                 JOptionPane.showMessageDialog(this, "Tu puntaje es de: " + puntaje, "Ganaste papu!!", JOptionPane.INFORMATION_MESSAGE);
+                llamarA.quimcuatro=true;
+                llamarA.facil=true;
+                conecta.setVisible(true);
+                this.setVisible(false);
             }
         }
         jlb1.setText(String.valueOf(puntaje));
@@ -75,7 +79,6 @@ public class Q4Facil extends javax.swing.JFrame {
 
                 puntaje = puntaje - 5;
 
-                marco = false;
             }
             while (contador < 1) {//Hace una comparacion falsa, para que el puntaje no se trabe
                 if (imagenUno.getDescription().compareTo(imagenDos.getDescription()) == 0) {
