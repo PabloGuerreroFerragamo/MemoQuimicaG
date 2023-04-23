@@ -4,6 +4,7 @@
  */
 package BD;
 
+import GUI.MenuPrincipal;
 import GUI.Q1Dificil;
 import GUI.Q1Facil;
 import GUI.Q1Medio;
@@ -64,6 +65,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
         JLBMemJugado = new javax.swing.JLabel();
         JLBDifJugado = new javax.swing.JLabel();
         JLBFechaJugado = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -114,41 +116,51 @@ public class VentanaPuntajes extends javax.swing.JFrame {
 
         JLBFechaJugado.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
+        jButton1.setText("Regresar al menu principal");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(40, 40, 40))
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JLBFechaJugado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(40, 40, 40))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JLBDifJugado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JTFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(JLBPuntaje, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54)
-                        .addComponent(JBTPuntaje))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JLBMemJugado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(125, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JLBFechaJugado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JLBDifJugado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JTFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(JLBPuntaje, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(54, 54, 54)
+                                .addComponent(JBTPuntaje))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(JLBMemJugado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap(125, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +196,9 @@ public class VentanaPuntajes extends javax.swing.JFrame {
                         .addComponent(jLabel7))
                     .addComponent(JLBFechaJugado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
                 .addGap(33, 33, 33))
         );
 
@@ -302,27 +316,6 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             }   
         }
     }
-    private void Enviar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enviar
-        try {
-            if(((JLBPuntaje.getText().length())==0)&&((JTFNombre.getText().length())==0)){
-                JOptionPane.showMessageDialog(rootPane, "Debes Ingresar un nombre", "Puntaje", HEIGHT);
-                JOptionPane.showMessageDialog(rootPane, "Debes obtener tu puntaje", "Puntaje", HEIGHT);
-            }
-            if((JTFNombre.getText().length())!=0 ){
-            PreparedStatement pps= (PreparedStatement) cn.prepareStatement("INSERT INTO jugador(Nombre_Del_Jugador,Puntaje) VALUES(?,?)");
-            pps.setString(1, JTFNombre.getText());
-            pps.setString(2, String.valueOf(JLBPuntaje.getText()));
-            pps.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Puntaje Guardado");
-            }
-            else if((JTFNombre.getText().length())==0){
-                JOptionPane.showMessageDialog(rootPane, "Introduce un nombre");
-            }
-        } catch (SQLException ex) {
-            Logger.getLogger(VentanaPuntajes.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_Enviar
-
     private void ObtenerPuntaje(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerPuntaje
         EstablecerPuntajePorDefault();
     }//GEN-LAST:event_ObtenerPuntaje
@@ -333,6 +326,33 @@ public class VentanaPuntajes extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "Tu nombre no debe tener mas de 15 caracteres de longitud");
     }
     }//GEN-LAST:event_JTFNombreKeyTyped
+
+    private void Enviar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enviar
+        try {
+            if(((JLBPuntaje.getText().length())==0)&&((JTFNombre.getText().length())==0)){
+                JOptionPane.showMessageDialog(rootPane, "Debes Ingresar un nombre", "Puntaje", HEIGHT);
+                JOptionPane.showMessageDialog(rootPane, "Debes obtener tu puntaje", "Puntaje", HEIGHT);
+            }
+            if((JTFNombre.getText().length())!=0 ){
+                PreparedStatement pps= (PreparedStatement) cn.prepareStatement("INSERT INTO jugador(Nombre_Del_Jugador,Puntaje) VALUES(?,?)");
+                pps.setString(1, JTFNombre.getText());
+                pps.setString(2, String.valueOf(JLBPuntaje.getText()));
+                pps.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Puntaje Guardado");
+            }
+            else if((JTFNombre.getText().length())==0){
+                JOptionPane.showMessageDialog(rootPane, "Introduce un nombre");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(VentanaPuntajes.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_Enviar
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        MenuPrincipal ventana = new MenuPrincipal();
+        ventana.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -377,6 +397,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
     private javax.swing.JLabel JLBMemJugado;
     private javax.swing.JLabel JLBPuntaje;
     private javax.swing.JTextField JTFNombre;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
