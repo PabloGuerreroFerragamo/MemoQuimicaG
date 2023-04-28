@@ -20,6 +20,8 @@ import GUI.Q4Medio;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -205,6 +207,11 @@ public class VentanaPuntajes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public static String fechaActual(){
+        Date fecha=new Date();
+        SimpleDateFormat formatoFecha=new SimpleDateFormat("dd/MM/YYYY");
+        return formatoFecha.format(fecha);
+    }
     public void EstablecerPuntajePorDefault(){
         if(quimuno==true){
             juegoparaBD="Quimica Inorganica 1";
@@ -216,6 +223,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             Q1Medio llamaraclaseQ1M=new Q1Medio();
@@ -224,6 +232,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -232,6 +241,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
         }
         if(quimdos==true){
@@ -243,6 +253,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             dificultadparaBD="Medio";
@@ -251,6 +262,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -259,6 +271,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
         }
         if(quimtres==true){
@@ -270,6 +283,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             dificultadparaBD="Medio";
@@ -278,6 +292,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -297,6 +312,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             dificultadparaBD="Medio";
@@ -305,6 +321,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -313,6 +330,7 @@ public class VentanaPuntajes extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }   
         }
     }
@@ -334,11 +352,17 @@ public class VentanaPuntajes extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "Debes obtener tu puntaje", "Puntaje", HEIGHT);
             }
             if((JTFNombre.getText().length())!=0 ){
-                PreparedStatement pps= (PreparedStatement) cn.prepareStatement("INSERT INTO jugador(Nombre_Del_Jugador,Puntaje) VALUES(?,?)");
-                pps.setString(1, JTFNombre.getText());
-                pps.setString(2, String.valueOf(JLBPuntaje.getText()));
-                pps.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Puntaje Guardado");
+                PreparedStatement paraTablajugador= (PreparedStatement) cn.prepareStatement("INSERT INTO jugador(Nombre_Del_Jugador,Puntaje) VALUES(?,?)");
+                paraTablajugador.setString(1, JTFNombre.getText());
+                paraTablajugador.setString(2, String.valueOf(JLBPuntaje.getText()));
+                paraTablajugador.executeUpdate();
+                
+                PreparedStatement paraTablaJuego=(PreparedStatement) cn.prepareStatement("INSERT INTO juego(Nombre_del_memorama_jugado,Dificultad_Del_Memorama_Jugado,Fecha_de_Juego) VALUES(?,?,?)");
+                paraTablaJuego.setString(1,JLBMemJugado.getText());
+                paraTablaJuego.setString(2,JLBDifJugado.getText());
+                paraTablaJuego.setString(3,JLBFechaJugado.getText());
+                paraTablaJuego.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Puntaje y datos guardados");
             }
             else if((JTFNombre.getText().length())==0){
                 JOptionPane.showMessageDialog(rootPane, "Introduce un nombre");
