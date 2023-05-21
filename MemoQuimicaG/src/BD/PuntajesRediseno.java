@@ -1,6 +1,5 @@
 package BD;
 
-import GUI.*;
 import GUI.MenuPrincipal;
 import GUI.Q1Dificil;
 import GUI.Q1Facil;
@@ -16,21 +15,26 @@ import GUI.Q4Facil;
 import GUI.Q4Medio;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
+import java.awt.Toolkit;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class PuntajesRediseño extends javax.swing.JFrame {
+public class PuntajesRediseno extends javax.swing.JFrame {
     ConexionBD con= new ConexionBD();
     Connection cn = con.conexion();
     public static boolean facil,medio,dificil,quimuno,quimdos,quimtres,quimcuatro;
     public static String dificultadparaBD,juegoparaBD; 
 
-    public PuntajesRediseño() {
+    public PuntajesRediseno() {
         initComponents();
         JLBPuntaje.setEnabled(false);
         this.setLocationRelativeTo(null);
+        Toolkit t=Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("/CSS/LogoVentana.png")));
         setTitle("Ventana de puntajes");
     }
 
@@ -205,7 +209,13 @@ public class PuntajesRediseño extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
- public void EstablecerPuntajePorDefault(){
+ 
+    public static String fechaActual(){
+        Date fecha=new Date();
+        SimpleDateFormat formatoFecha=new SimpleDateFormat("dd/MM/YYYY");
+        return formatoFecha.format(fecha);
+    }
+    public void EstablecerPuntajePorDefault(){
         if(quimuno==true){
             juegoparaBD="Quimica Inorganica 1";
             
@@ -216,6 +226,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             Q1Medio llamaraclaseQ1M=new Q1Medio();
@@ -224,6 +235,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -232,6 +244,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
         }
         if(quimdos==true){
@@ -243,6 +256,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             dificultadparaBD="Medio";
@@ -251,6 +265,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -259,6 +274,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
         }
         if(quimtres==true){
@@ -270,6 +286,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             dificultadparaBD="Medio";
@@ -278,6 +295,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -286,6 +304,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
         }
         if(quimcuatro==true){
@@ -297,6 +316,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(medio==true){
             dificultadparaBD="Medio";
@@ -305,6 +325,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }
             if(dificil==true){
             dificultadparaBD="Dificil";
@@ -313,6 +334,7 @@ public class PuntajesRediseño extends javax.swing.JFrame {
             JBTPuntaje.setEnabled(false);
             JLBMemJugado.setText(juegoparaBD);
             JLBDifJugado.setText(dificultadparaBD);
+            JLBFechaJugado.setText(fechaActual());
             }   
         }
     }
@@ -375,21 +397,23 @@ MenuPrincipal ventana = new MenuPrincipal();
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PuntajesRediseño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PuntajesRediseno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PuntajesRediseño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PuntajesRediseno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PuntajesRediseño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PuntajesRediseno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PuntajesRediseño.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PuntajesRediseno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PuntajesRediseño().setVisible(true);
+                new PuntajesRediseno().setVisible(true);
             }
         });
     }

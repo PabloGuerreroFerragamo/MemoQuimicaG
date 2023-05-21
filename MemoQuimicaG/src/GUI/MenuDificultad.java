@@ -1,10 +1,14 @@
 package GUI;
 
+import java.awt.Toolkit;
+
 public class MenuDificultad extends javax.swing.JFrame {
 
     public MenuDificultad() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Toolkit t=Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("/CSS/LogoVentana.png")));
         setTitle("Dificultad Memorama Quimica Inorganica 1");
     }
 

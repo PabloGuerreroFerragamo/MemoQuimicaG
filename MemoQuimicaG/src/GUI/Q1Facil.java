@@ -1,14 +1,15 @@
 package GUI;
 
-import BD.VentanaPuntajes;
+import BD.PuntajesRediseno;
+import java.awt.Toolkit;
 import packeteGomez.GomezClass;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 public class Q1Facil extends javax.swing.JFrame {
-    public VentanaPuntajes conecta=new VentanaPuntajes();
-    VentanaPuntajes llamarA = new VentanaPuntajes();
+        public PuntajesRediseno conecta=new PuntajesRediseno();
+    PuntajesRediseno llamarA = new PuntajesRediseno();
     private GomezClass llama = new GomezClass();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
@@ -26,6 +27,8 @@ public class Q1Facil extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setTitle("Memorama Quimica Inorganica 1 Facil");
+        Toolkit t=Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("/CSS/LogoVentana.png")));
         Ordenar();
     }
 

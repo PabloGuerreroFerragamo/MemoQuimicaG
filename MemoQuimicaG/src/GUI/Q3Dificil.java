@@ -1,6 +1,7 @@
 package GUI;
 
-import BD.VentanaPuntajes;
+import BD.PuntajesRediseno;
+import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -8,8 +9,8 @@ import packeteGomez.DormirEsParaGiles;
 
 
 public class Q3Dificil extends javax.swing.JFrame {
-    public VentanaPuntajes conecta=new VentanaPuntajes();
-    VentanaPuntajes llamarA = new VentanaPuntajes();
+    public PuntajesRediseno conecta=new PuntajesRediseno();
+    PuntajesRediseno llamarA = new PuntajesRediseno();
     private DormirEsParaGiles llama = new DormirEsParaGiles();
     private boolean caraVolteada = false;
     private ImageIcon imagenUno;
@@ -27,6 +28,8 @@ public class Q3Dificil extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setTitle("Memorama Quimica Avanzada 3 Dificil");
+        Toolkit t=Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("/CSS/LogoVentana.png")));
         Ordenar();
     }
 

@@ -1,5 +1,7 @@
 package GUI;
 
+import java.awt.Toolkit;
+
 
 public class MenuPrincipal extends javax.swing.JFrame {
 
@@ -8,7 +10,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
-        setTitle("MemoQuimica By 6IV4");
+        Toolkit t=Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("/CSS/LogoVentana.png")));
+        setTitle("MemoQuimica By Rec17 & PablitoMix");
     }
 
     @SuppressWarnings("unchecked")

@@ -1,6 +1,7 @@
 package GUI;
 
 import BD.VentanaPuntajes;
+import java.awt.Toolkit;
 import packeteGomez.GomezClass;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,6 +27,8 @@ public class Q4Facil extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setTitle("Memorama Quimica Termoquimica 4 Facil");
+        Toolkit t=Toolkit.getDefaultToolkit();
+        setIconImage(t.getImage(getClass().getResource("/CSS/LogoVentana.png")));
         Ordenar();
     }
 
