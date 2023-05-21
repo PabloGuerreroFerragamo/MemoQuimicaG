@@ -72,6 +72,11 @@ public class VentanaPuntajes extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Nombre:");
 
+        JTFNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTFNombreActionPerformed(evt);
+            }
+        });
         JTFNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 JTFNombreKeyTyped(evt);
@@ -99,7 +104,6 @@ public class VentanaPuntajes extends javax.swing.JFrame {
         });
 
         JLBPuntaje.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        JLBPuntaje.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Memorama Jugado");
@@ -353,6 +357,10 @@ public class VentanaPuntajes extends javax.swing.JFrame {
         ventana.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void JTFNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTFNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTFNombreActionPerformed
 
     /**
      * @param args the command line arguments
