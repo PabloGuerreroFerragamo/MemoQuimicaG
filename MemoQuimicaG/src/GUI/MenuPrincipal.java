@@ -1,5 +1,6 @@
 package GUI;
 
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     static int contador = 0;
